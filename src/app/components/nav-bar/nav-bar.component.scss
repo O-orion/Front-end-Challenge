@@ -1,0 +1,30 @@
+@use '../../styles/variaveis.scss';
+
+// styling menu
+.l-menu{
+
+  background-color: variaveis.$color-fundo-menu;
+  color: variaveis.$color-text-white;
+
+  height: 8vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+  box-shadow: -2px 8px 6px -1px rgba(0,0,0,0.1);
+
+
+}
+
+.l-menu h2 {
+  font-size: 2em;
+
+  transition: .5s;
+}
+
+.l-menu h2:hover {
+  color: variaveis.$color-text-hover;
+}

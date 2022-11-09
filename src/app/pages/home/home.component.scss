@@ -1,0 +1,28 @@
+.l-home {
+  display: grid;
+  grid-template-areas:
+    "navBar navBar navBar"
+    "main main main"
+    "main main main"
+    "main main main"
+    "footer footer footer"
+  ;
+
+  overflow: hidden;
+
+  &_header{
+    grid-area: navBar;
+  }
+
+  &_main{
+    grid-area: main;
+  }
+
+
+
+  &_footer {
+    grid-area: footer;
+  }
+}
+
+
