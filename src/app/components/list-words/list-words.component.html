@@ -3,19 +3,19 @@
   <div class="l-main_select-word">
       <h2>Selected Word</h2>
       <div class="l-main_select-word_word">
-          <h2>Palavra</h2>
-          <p>se ila o que</p>
+          <h2>{{wordSelected.word}}</h2>
+          <p>{{ wordSelected.phonetic}}</p>
       </div>
 
       <section class="l-main_select-word_audio">
         <audio controls >
-            <source src="//ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3" type="audio/mp3">
+            <source src={{wordSelected.audio}} type="audio/mp3">
         </audio>
       </section>
 
       <section class="l-main_select-word_controller">
         <h2>Meanings</h2>
-        <p>Verb algum coisa</p>
+        <p> {{ wordSelected.definition }}</p>
         <div class="l-main_select-word_controller-buttons">
           <button>Voltar</button>
           <button>Próximo</button>
@@ -31,20 +31,16 @@
     </section>
 
     <section class="l-main_list-words_table">
-      <table>
+      <table >
         <thead>
           <tr>
             <th colspan="6">Words</th>
           </tr>
 
         </thead>
-        <tbody>
-          <tr>
-            <td colspan="1"><a href="">palavra</a></td>
-            <td colspan="1"><a href="">palavra</a></td>
-            <td colspan="1"><a href="">palavra</a></td>
-            <td colspan="1"><a href="">palavra</a></td>
-            <td colspan="1"><a href="">palavra</a></td>
+        <tbody >
+          <tr *ngFor="let letra of letras[0]">
+            <td colspan="1"><a (click)="getWord(letra)">{{letra}}</a></td>
           </tr>
 
 

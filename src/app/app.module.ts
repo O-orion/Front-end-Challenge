@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // Imports Components
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { ListWordsComponent } from './components/list-words/list-words.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
 
