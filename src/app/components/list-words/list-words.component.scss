@@ -50,7 +50,6 @@
     }
 
     &_audio{
-      border: 1px solid yellow;
       width: 60%;
       margin-bottom: 15px;
       margin-top: 15px;
@@ -63,11 +62,28 @@
     &_controller{
       width: 60%;
 
+      &-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+          cursor: pointer;
+          border-bottom: solid 1px #000;
+        }
+
+        a:hover {
+          border-bottom: solid 1px rgb(61, 171, 223);
+          color: rgb(61, 171, 223);
+        }
+      }
+
       h2{
 
         font-size: 1.9em;
         margin-bottom: 15px;
       }
+
       &-buttons{
         margin-top: 15px;
 
@@ -123,6 +139,7 @@
       margin-bottom: 5px;
 
       a {
+        cursor: pointer;
         padding: 5px;
         border: ridge 2px rgb(15, 15, 15);
         border-radius: 3px;
@@ -138,8 +155,8 @@
 
     // table with words
     &_table{
-      width: 80%;
-      height: 55%;
+      width: 90%;
+      height: 59%;
       border: 4px ridge black;
 
       overflow: scroll;
@@ -147,10 +164,16 @@
         width: 100%;
 
         td {
+          cursor: pointer;
           width: 1%;
           border: solid 1px black;
           text-align: center;
         }
+      }
+
+      &-remove{
+        color: RED;
+        cursor: pointer;
       }
     }
   }

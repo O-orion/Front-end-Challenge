@@ -14,7 +14,10 @@
       </section>
 
       <section class="l-main_select-word_controller">
-        <h2>Meanings</h2>
+        <div class="l-main_select-word_controller-icons">
+          <h2>Meanings</h2>
+          <a  (click)="setFavorites(wordSelected)">Adicionar favorito</a>
+        </div>
         <p> {{ wordSelected.definition }}</p>
         <div class="l-main_select-word_controller-buttons">
           <button>Voltar</button>
@@ -25,9 +28,9 @@
 
   <div class="l-main_list-words">
     <section class="l-main_list-words_menu">
-      <a href="">Word List</a>
-      <a href="">Favorites</a>
-      <a href="">History</a>
+      <a  (click)="getWords()">Word List</a>
+      <a  (click)="getFavorites()">Favorites</a>
+      <a (click)="getHistory()">History</a>
     </section>
 
     <section class="l-main_list-words_table">
@@ -39,8 +42,9 @@
 
         </thead>
         <tbody >
-          <tr *ngFor="let letra of letras[0]">
+          <tr *ngFor="let letra of letras">
             <td colspan="1"><a (click)="getWord(letra)">{{letra}}</a></td>
+            <td *ngIf="favoriteClicked " class="l-main_list-words_table-remove" (click)="removeLetterFavorites(letra)"><a >REMOVER</a></td>
           </tr>
 
 
