@@ -14,9 +14,9 @@
   - JavaScript
 ## Como instalar projeto
 
- 1 - Clone ou  faça o donwload como como zip.
- 2 - Abra a pasta raiz  do porjeto com o terminal de comando e execute o seguinte comando: npm install
- 3 - Para iniciar o projeto execute o seguinte comando no terminal : ng s -o
+  - 1  Clone ou  faça o donwload como como zip.
+  - 2  Abra a pasta raiz  do porjeto com o terminal de comando e execute o seguinte comando: npm install
+  - 3  Para iniciar o projeto execute o seguinte comando no terminal : ng s -o
 
 ## This is a challenge by Coodesh
 This is a challenge by Coodesh
