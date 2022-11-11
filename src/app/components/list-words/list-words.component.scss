@@ -4,8 +4,6 @@
   height: 90vh;
   width: 100%;
 
-
-
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 2fr;
@@ -178,6 +176,103 @@
     }
   }
 
+
+  @media screen and (min-width: 390px) {
+
+    display: block;
+    overflow: scroll;
+
+    &_select-word {
+      margin-top: 2%;
+      justify-content: start;
+      height: 70vh;
+      width: 100vw;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      &_word {
+        height: 50%;
+        width: 80%;
+      }
+
+      &_audio {
+        width: 80%;
+      }
+
+      &_controller {
+        width: 80%;
+        &-buttons {
+          padding: 2%;
+          justify-content: space-between;
+
+          button {
+            font-size: 1.3em;
+            width: 40%;
+          }
+        }
+
+      }
+
+
+    }
+
+    &_list-words {
+      margin-top: 2%;
+      justify-content: start;
+    }
+
+  }
+
+  @media screen and (min-width: 810px) {
+
+    display: flex;
+    overflow: scroll;
+
+    &_select-word {
+      margin-top: 2%;
+      justify-content: start;
+      height: 70vh;
+      width: 50vw;
+
+      h2 {
+        font-size: 2em;
+      }
+
+      &_word {
+        height: 50%;
+        width: 80%;
+      }
+
+      &_audio {
+        width: 80%;
+      }
+
+      &_controller {
+        width: 80%;
+        &-buttons {
+          padding: 2%;
+          justify-content: space-between;
+
+          button {
+            font-size: 1.3em;
+            width: 40%;
+          }
+        }
+
+      }
+
+
+    }
+
+    &_list-words {
+      margin-top: 2%;
+      width: 50%;
+      justify-content: start;
+    }
+
+  }
 
 }
 

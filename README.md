@@ -1,10 +1,10 @@
-# PalavrasListadas
+# Front-end Challenge 🏅 2022 - Dictionary / Lista Palavras
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+  Este projeto tem como objetivo exibir para o usuário um conjunto de palavras, no qual ao ser clicada, será exibido para o usuário a descrição e o seu pronunciamento em inglês.
 
-## Development server
+## Tecnologias utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ 
 
 ## Code scaffolding
 

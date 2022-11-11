@@ -17,7 +17,15 @@
     grid-area: main;
   }
 
-  
+  @media screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+
+    &_main {
+      display: block;
+    }
+
+  }
 }
 
 
