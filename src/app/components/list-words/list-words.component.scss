@@ -24,10 +24,12 @@
     h2 {
       font-size: 3em;
       margin-bottom: 2px;
-    }
+      color: #db962a;
+      }
 
     &_word {
-      border: rgb(173, 66, 66) 4px ridge;
+      border:  variaveis.$color-fundo-menu 4px ridge;
+      background-color: rgb(245, 244, 244);
       border-radius: 8px;
       height: 40%;
       width: 60%;
@@ -39,6 +41,7 @@
 
       h2 {
         font-size: 2.5em;
+        font-size: bold;
       }
 
       p{
@@ -91,8 +94,9 @@
 
         button {
           width: 20%;
-          background-color: transparent;
-          border: 1px solid black;
+          background-color:  rgb(0, 174, 255);
+          border: 2px solid #fff;
+          color: #fff;
           padding: 2%;
 
           font-size: 1.5em;
@@ -100,12 +104,13 @@
 
           border-radius: 5px;
 
-          transition: 0.8s ease-in-out;
+          transition: .5s ease-in-out;
         }
 
         button:hover {
-          background-color: black;
-          color: #fff;
+          background-color: transparent;
+          border: 2px solid rgb(0, 0, 0);
+          color:  variaveis.$color-fundo-menu;
         }
 
 
@@ -132,14 +137,18 @@
 
       width: 80%;
       display: flex;
+
       gap: 1%;
 
       margin-bottom: 5px;
 
       a {
         cursor: pointer;
-        padding: 5px;
-        border: ridge 2px rgb(15, 15, 15);
+        padding: 8px;
+        background-color:  rgb(0, 174, 255);
+        color: rgb(255, 255, 255);
+
+        border: #000 solid 1px;
         border-radius: 3px;
         transition: .5s ease-in-out;
         text-decoration: none;
@@ -155,7 +164,8 @@
     &_table{
       width: 90%;
       height: 59%;
-      border: 4px ridge black;
+      border: 4px ridge  variaveis.$color-fundo-menu;
+      border-radius: 8px;
 
       overflow: scroll;
       table {
@@ -164,8 +174,10 @@
         td {
           cursor: pointer;
           width: 1%;
-          border: solid 1px black;
+          border-bottom: solid 1px #db972a57;
           text-align: center;
+
+          font-size: 1.2em;
         }
       }
 
