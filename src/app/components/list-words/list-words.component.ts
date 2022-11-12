@@ -2,6 +2,9 @@ import { LocalStorageService } from './../../services/local-storage.service';
 import { word } from './../../models/word';
 import { Component, OnInit } from '@angular/core';
 import { GetWordsService } from 'src/app/services/get-words.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+
+
 
 
 @Component({
@@ -10,6 +13,8 @@ import { GetWordsService } from 'src/app/services/get-words.service';
   styleUrls: ['./list-words.component.scss']
 })
 export class ListWordsComponent implements OnInit {
+
+
 
   letras: String [] = [];
   wordHistory: word[] = [];
@@ -30,9 +35,8 @@ export class ListWordsComponent implements OnInit {
 
     let localWords = this.localStorageService.getItemStorage('words')
 
-
-
     if( localWords == null ){
+      console.log('entrou')
       this.getWordsService.getWords().subscribe({
         next: (words) => {
           console.log('oi')
@@ -43,6 +47,7 @@ export class ListWordsComponent implements OnInit {
          this.localStorageService.setItemStorage("words", this.letras)
          this.localStorageService.setItemStorage('word', []);
          this.localStorageService.setItemStorage('favorites', [])
+         console.log('Não entrou')
         }
       })
 
@@ -55,6 +60,7 @@ export class ListWordsComponent implements OnInit {
 
   getWord(word: String){
 
+    this.wordHistory =  this.localStorageService.getItemStorage('word')
 
     if(this.wordHistory !== null &&  this.wordHistory.find((palavra) => palavra.word === word)){
 
@@ -118,4 +124,26 @@ export class ListWordsComponent implements OnInit {
     this.letras = this.wordFavorites.map((word) => word.word);
   }
 
+
+  nextWord (word: any): void {
+    console.log(word)
+    let index = this.wordHistory.indexOf(word);
+
+    if(index >= 0 && index < this.wordHistory.length - 1) {
+      let nextWord = this.wordHistory[index + 1]
+      this.wordSelected = nextWord;
+      console.log('FUNFOU')
+    }
+
+
+  }
+
+  backWord (word: word): void {
+    let index = this.wordHistory.indexOf(word)
+
+    if( index > 0 ){
+      this.wordSelected = this.wordHistory[index - 1]
+    }
+
+  }
 }

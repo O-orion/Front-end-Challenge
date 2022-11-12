@@ -10,6 +10,9 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListWordsComponent } from './components/list-words/list-words.component';
 
+// Imports FontAwesome
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,7 @@ import { ListWordsComponent } from './components/list-words/list-words.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
   ],
   providers: [],
 

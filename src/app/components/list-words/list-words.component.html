@@ -16,12 +16,12 @@
       <section class="l-main_select-word_controller">
         <div class="l-main_select-word_controller-icons">
           <h2>Meanings</h2>
-          <a  (click)="setFavorites(wordSelected)">Favoritar</a>
+          <a  (click)="setFavorites(wordSelected)">FAVORITAR</a>
         </div>
         <p> {{ wordSelected.definition }}</p>
         <div class="l-main_select-word_controller-buttons">
-          <button>Voltar</button>
-          <button>Próximo</button>
+          <button (click)="backWord(wordSelected)">Voltar</button>
+          <button (click)="nextWord(wordSelected)">Próximo</button>
         </div>
       </section>
   </div>
