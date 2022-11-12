@@ -12,6 +12,8 @@
   - Node
   - Express
   - JavaScript
+
+  Link para o projeto do back-end: https://github.com/O-orion/back-end-words
 ## Como instalar projeto
 
   - 1  Clone ou  faça o donwload em zip.
